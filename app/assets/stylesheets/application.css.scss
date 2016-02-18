@@ -16,3 +16,15 @@
  *= require_tree .
  *= require_self
  */
+
+.question-index {
+	padding: 15px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.question-index:hover {
+	background-color: #f6f6f6;
+}

@@ -1,5 +1,11 @@
 <% @results.each do |result| %>
-	<h3><%= link_to "#{result.title}".html_safe, result.link %></h3>
+	<div class="question-index">
+		<h3><%= link_to "#{result.title}".html_safe, result.link %></h3>
+		<div>
+			<p><span>Posted:</span> <%= DateTime.strptime(result.creation_date,'%s').strftime("%m/%d/%Y") %></p>
+			<p><span>Tags:</span> <%= result.tags %></p>
+		</div>
+	</div>
 <% end %>
 
 <%= paginate @results %>
