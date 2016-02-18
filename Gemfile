@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'httparty', '~> 0.13.7'
 gem "dish", require: "dish/ext"
 gem 'newrelic_rpm'
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
   gem 'byebug'
