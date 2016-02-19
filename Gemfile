@@ -14,6 +14,7 @@ gem 'httparty', '~> 0.13.7'
 gem "dish", require: "dish/ext"
 gem 'newrelic_rpm'
 gem 'kaminari', '~> 0.16.3'
+gem 'searchkick', '~> 1.1', '>= 1.1.2'
 
 group :development, :test do
   gem 'byebug'
