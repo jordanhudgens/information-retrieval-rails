@@ -1,3 +1,10 @@
 class Question < ActiveRecord::Base
-	searchkick
+	searchkick text_start: [:title], suggest: [:title]
+
+  def search_data
+    {
+      title: title,
+      tags: tags
+    }
+  end
 end
