@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'static#homepage'
+	resources :questions do
+    collection do
+      get :autocomplete
+    end
+  end
+
+  root to: 'questions#index'
 end
