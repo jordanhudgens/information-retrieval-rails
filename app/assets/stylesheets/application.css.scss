@@ -26,9 +26,38 @@
 }
 
 .question-index:hover {
-	background-color: #f6f6f6;
+	background-color: #66ffff;
 }
 
+.jumbotron {
+  padding: 15px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color:#0066ff;
+	background-color: #f2f2f2;
+	
+}
+
+.container-fluid{
+  padding: 15px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  background-color: #e6ffff;
+  overflow: auto;
+  
+}
+
+.searchpadding{
+  padding: 15px;
+	margin: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
 /*!
  * jQuery UI Bootstrap (0.22)
  * http://addyosmani.github.com/jquery-ui-bootstrap
