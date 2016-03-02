@@ -1,3 +1,4 @@
+<div class="searchpadding">
 <header>
   <%= link_to "All Questions", questions_path %>
 
@@ -8,4 +9,5 @@
   <% if @questions.suggestions.any? %>
     <p>Did you mean: <%= @questions.suggestions.first %></p>
   <% end %>
-</header>
+</header> 
+</div>
