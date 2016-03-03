@@ -3,7 +3,7 @@
 		<h3><%= link_to "#{question.title}".html_safe, question.link %></h3>
 		<div>
 			<p><span>Posted:</span> <%= DateTime.strptime(question.creation_date,'%s').strftime("%m/%d/%Y") %></p>
-			<p><span>Tags:</span> <%= question.tags %></p>
+			<p><span>Tags:</span> <%= convert_tags_to_links(tags: question.tags) %></p>
 		</div>
 	</div>
 <% end %>
