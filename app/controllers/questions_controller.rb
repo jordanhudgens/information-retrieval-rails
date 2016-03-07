@@ -1,7 +1,10 @@
 class QuestionsController < ApplicationController
 	def index
-		query = params[:q].presence || "*"
-		@questions = Question.search(query, suggest: true, page: params[:page], per_page: 20)
+		query = params[:q].presence || "*" 
+		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: 20)
+		# ,fields: [{title: :text_start}], highlight: {tag: "<strong>", fields: {description: {fragment_size: 100}}}
+# 		@questions = 	@questions.first
+#         @questions.similar(fields: ["title"])
 	end
 
   def autocomplete
