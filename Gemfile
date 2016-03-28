@@ -16,6 +16,7 @@ gem 'newrelic_rpm'
 gem 'kaminari', '~> 0.16.3'
 gem 'searchkick', '~> 1.1', '>= 1.1.2'
 gem 'jquery-ui-rails'
+gem 'devise', '~> 3.5', '>= 3.5.3'
 
 group :development, :test do
   gem 'byebug'
