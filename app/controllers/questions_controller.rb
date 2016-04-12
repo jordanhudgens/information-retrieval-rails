@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
   end
 
   def history
+  	authenticate_user!
   	@past_searches = current_user.histories
   end
 end
