@@ -2,7 +2,7 @@
 	<div class="question-index">
 		<h3><%= link_to result.query_title, questions_path(q: result.query_title) %></h3>
 		<div>
-			<p><span>Searched on:</span> <%= result.created_at %></p>
+			<p><span>Searched on:</span> <%= result.created_at.strftime("%m/%d/%Y at %I:%M%p") %></p>
 		</div>
 	</div>
 <% end %>
