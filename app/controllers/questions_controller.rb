@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
 		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: 20)
 		
 		if current_user && query
-			raise
+			History.create!(user_id: current_user.id, query_title: query)
 		end
 	end
 
