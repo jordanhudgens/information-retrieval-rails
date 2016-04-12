@@ -1,0 +1,8 @@
+<% @past_searches.each  do |result| %>
+	<div class="question-index">
+		<h3><%= link_to result, root_path %></h3>
+		<div>
+			<p><span>Searched on:</span> <%= result.created_at %></p>
+		</div>
+	</div>
+<% end %>

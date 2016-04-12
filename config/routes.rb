@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'history', to: 'questions#history', as: 'history'
+
   root to: 'questions#index'
 end
