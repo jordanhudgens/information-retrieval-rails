@@ -15,6 +15,6 @@ class QuestionsController < ApplicationController
 
   def history
   	authenticate_user!
-  	@past_searches = current_user.histories
+  	@past_searches = current_user.histories.page(params[:page]).per(5)
   end
 end
