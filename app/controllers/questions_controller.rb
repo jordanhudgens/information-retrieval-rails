@@ -12,4 +12,8 @@ class QuestionsController < ApplicationController
   def autocomplete
     render json: Question.search(params[:term], fields: [{title: :text_start}], limit: 10).map(&:title)
   end
+
+  def history
+  	@past_searches = current_user.histories
+  end
 end
