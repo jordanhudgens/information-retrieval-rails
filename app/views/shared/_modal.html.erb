@@ -43,8 +43,11 @@
 				<h4 class="modal-title" id="myModalLabel">
 						Advance Search - Stack Overflow Search (SOS)
 				</h4>
+	
 				
-				<form action="/questions" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+			<!--	<form action="/questions" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+				
+				
    				 <input type="text" name="q" id="q" placeholder="Search" class="form-control input-lg ui-autocomplete-input" autocomplete="off">
    				 <input type="text" name="q" id="q" placeholder="Tag" class="form-control input-lg ui-autocomplete-input" autocomplete="off">
 
@@ -54,7 +57,33 @@
 					</form>
 					  <input type="submit" value="Submit">
 
-				</form>
+				</form>-->
+				
+				<div class="searchpadding">
+					<header>
+
+						<%= form_tag questions_path, method: :get do %>
+						<%= text_field_tag :q, nil, placeholder: "Search", class: 'form-control input-lg' %>
+						<%= check_box_tag(:lan_en, "english") %>
+						<%= label_tag(:lan_english, "English") %>
+						<%= check_box_tag(:lan_sp, "spanish") %>
+						<%= label_tag(:lan_spanish, "Spanish") %>
+						</br>
+						<%= label_tag(:sort_option_caption, "Sort") %>
+						<%= select_tag(:sort_option, options_for_select([['Asc', 1], ['Desc', 2]], selected: :sort_option )) %>
+						
+						<%= label_tag(:per_page_caption, "Per_Page") %>
+						<%= select_tag(:per_page, options_for_select([['20', 1], ['50', 2], ['100', 2]], selected: :per_page )) %>
+
+
+						<% end %>
+						
+					<!--	<% if @questions.suggestions %>
+						<p>Did you mean: <%= @questions.suggestions.first %></p>
+						<% end %>-->
+					</header> 
+				</div>
+				
 				
 			</div>
 		</div>
@@ -62,4 +91,17 @@
 	</div>
 	
 </div>
+<!--<div class="searchpadding">
+<header>
+  <%= link_to "All Questions", questions_path %>
+
+  <%= form_tag questions_path, method: :get do %>
+    <%= text_field_tag :q, nil, placeholder: "Search", class: 'form-control input-lg' %>
+  <% end %>
+
+  <% if @questions.suggestions %>
+    <p>Did you mean: <%= @questions.suggestions.first %></p>
+  <% end %>
+</header> 
+</div>-->
 <!-- end of modal -->
