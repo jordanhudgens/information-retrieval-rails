@@ -73,7 +73,7 @@
 						<%= select_tag(:sort_option, options_for_select([['Asc', 1], ['Desc', 2]], selected: :sort_option )) %>
 						
 						<%= label_tag(:per_page_caption, "Per_Page") %>
-						<%= select_tag(:per_page, options_for_select([['20', 1], ['50', 2], ['100', 2]], selected: :per_page )) %>
+						<%= select_tag(:per_page, options_for_select([['20', 20], ['50', 50], ['100', 100]], selected: :per_page )) %>
 
 
 						<% end %>
