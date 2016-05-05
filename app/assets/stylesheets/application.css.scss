@@ -16,6 +16,20 @@
  *= require_tree .
  *= require_self
  */
+ 
+ .wrap{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+   padding: 20px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+	 border-radius: 5px;
+	 background-color: rgba(0,0,0,0.2);
+	 width: 300px;
+	
+	
+ }
 
 .question-index {
 	padding: 15px;
