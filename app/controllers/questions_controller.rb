@@ -10,12 +10,12 @@ class QuestionsController < ApplicationController
     end
     
     case :per_page
-    when 20
-    	page = 20
-    when 50
-    	page = 50
     when 100
     	page = 100
+    when 50
+    	page = 50
+    when 20
+    	page = 20
     end
 
 		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: page)
