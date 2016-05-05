@@ -78,9 +78,9 @@
 
 						<% end %>
 						
-					<!--	<% if @questions.suggestions %>
-						<p>Did you mean: <%= @questions.suggestions.first %></p>
-						<% end %>-->
+						<% if @questions.suggestions.count > 1 %>
+							<p>Did you mean: <%= @questions.suggestions.first %></p>
+						<% end %>
 					</header> 
 				</div>
 				

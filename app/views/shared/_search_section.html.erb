@@ -6,7 +6,7 @@
     <%= text_field_tag :q, nil, placeholder: "Search", class: 'form-control input-lg' %>
   <% end %>
 
-  <% if @questions.suggestions %>
+  <% if @questions.suggestions.count > 1 %>
     <p>Did you mean: <%= @questions.suggestions.first %></p>
   <% end %>
 </header> 
