@@ -20,13 +20,17 @@ class QuestionsController < ApplicationController
     	page = 20
     end
 
-		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: page)
+		question_query(query: query, page: page)
 
 		if current_user && query && current_user.histories
 			return if query == '*'
 			@questions = Question.search(query, suggest: true,order: {_score: sort},page: params[:page], per_page: page)
 			History.create!(user_id: current_user.id, query_title: query)
 		end
+	end
+
+	def question_query(query: q, page: p)
+		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: page)
 	end
 
   def autocomplete
