@@ -16,6 +16,8 @@ class QuestionsController < ApplicationController
     	page = 50
     when 20
     	page = 20
+    else
+    	page = 20
     end
 
 		@questions = Question.search(query, suggest: true,order: {_score: :desc},page: params[:page], per_page: page)
